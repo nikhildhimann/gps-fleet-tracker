@@ -31,7 +31,7 @@ export const adminNotificationsApi = baseApi.injectEndpoints({
     getAdminNotifications: builder.query<NotificationListResponse, NotificationQueryParams | void>({
       query: (params) => ({
         url: "/notifications",
-        params,
+        params: params || undefined,
       }),
       providesTags: (result) => buildTags(result),
     }),
@@ -42,7 +42,7 @@ export const adminNotificationsApi = baseApi.injectEndpoints({
     >({
       query: (params) => ({
         url: "/notifications/counts",
-        params,
+        params: params || undefined,
       }),
       providesTags: [COUNTS_TAG],
     }),
