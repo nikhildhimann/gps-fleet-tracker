@@ -195,5 +195,5 @@ export const normalizeFetchBaseQueryError = (
       ...normalizedData,
       message,
     },
-  };
+  } as unknown as FetchBaseQueryError;
 };
