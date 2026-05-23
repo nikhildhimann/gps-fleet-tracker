@@ -68,7 +68,7 @@ export const showNotificationToast = (notification: any) => {
   const location = notification.address || 'Location unavailable';
 
   return toast.custom(
-    (
+    (t) => (
       <div className="flex items-start gap-3 p-3 bg-white rounded-lg border border-gray-200 shadow-lg max-w-sm w-80">
         {/* Alert Icon */}
         <div className="flex-shrink-0 mt-1">
@@ -82,7 +82,7 @@ export const showNotificationToast = (notification: any) => {
               {vehicleNumber}
             </h4>
             <button
-              onClick={() => toast.dismiss()}
+              onClick={() => toast.dismiss(t)}
               className="text-gray-400 hover:text-gray-600 transition-colors"
             >
               <X size={14} />
