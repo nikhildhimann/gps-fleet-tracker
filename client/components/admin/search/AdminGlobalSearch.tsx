@@ -403,13 +403,14 @@ export default function AdminGlobalSearch() {
         badge: "Driver",
       }));
 
-    return [
+    const groups: SearchResultGroup[] = [
       { id: "organizations", label: "Organizations", items: organizationItems },
       { id: "vehicles", label: "Vehicles", items: vehicleItems },
       { id: "gps-devices", label: "GPS Devices", items: deviceItems },
       { id: "users", label: "Users", items: userItems },
       { id: "drivers", label: "Drivers", items: driverItems },
-    ].filter((group) => group.items.length > 0);
+    ];
+    return groups.filter((group) => group.items.length > 0);
   }, [devices, drivers, hasSearchText, normalizedQuery, organizations, quickActions, users, vehicles]);
 
   const isLoading =
