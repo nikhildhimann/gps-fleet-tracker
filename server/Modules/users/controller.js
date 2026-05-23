@@ -202,7 +202,12 @@ exports.login = async (req, res) => {
       return res.status(401).json({ status: false, message: "Invalid email or password" });
     }
 
-    const isMatch = await bcrypt.compare(password, user.passwordHash);
+    const hash = user.passwordHash || user.password;
+    if (!hash) {
+      return res.status(401).json({ status: false, message: "Invalid email or password" });
+    }
+
+    const isMatch = await bcrypt.compare(password, hash);
     if (!isMatch) {
       return res.status(401).json({ status: false, message: "Invalid email or password" });
     }
