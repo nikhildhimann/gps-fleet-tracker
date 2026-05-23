@@ -4,7 +4,7 @@ import dynamic from "next/dynamic"
 import { Loader2 } from "lucide-react"
 
 // Dynamically import Map with no SSR
-const Map = dynamic(() => import("./map-view-legacy").then((mod) => mod.MapViewLegacy), {
+const Map = dynamic(() => import("./map-view-legacy").then((mod) => mod.MapView), {
     ssr: false,
     loading: () => (
         <div className="flex h-full w-full items-center justify-center bg-slate-950 text-slate-400">
