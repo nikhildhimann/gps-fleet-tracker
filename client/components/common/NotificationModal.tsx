@@ -532,7 +532,7 @@ export function NotificationModal({ isOpen, onClose }: NotificationModalProps) {
           </div>
         </div>
       </div>
-
+      </div>
     </>
   );
 }
