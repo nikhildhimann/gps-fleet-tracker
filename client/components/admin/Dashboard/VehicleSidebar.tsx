@@ -21,7 +21,7 @@ export default function VehicleSidebar({ vehicles, onVehicleClick, onViewMap, se
             <div className="p-4 bg-gray-50/50 space-y-4">
                 <div className="flex items-center justify-between">
                     <div>
-                        <h2 className="text-xl font-black text-[#004D40]">Ajiva Tracker</h2>
+                        <h2 className="text-xl font-black text-[#004D40]">Gps Tracker</h2>
                         <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{vehicles.length} Car in my tracker</p>
                     </div>
                     <button className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white shadow-lg shadow-green-200 hover:scale-105 transition-transform">

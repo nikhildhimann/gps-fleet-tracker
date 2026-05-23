@@ -171,7 +171,7 @@ export default function OrganizationCreateModal({
                       ? "border border-slate-800 bg-slate-950/60 text-slate-100 focus:border-emerald-500/50 focus:ring-2 focus:ring-emerald-500/30"
                       : "border border-slate-200 bg-slate-50 text-slate-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20",
                   )}
-                  placeholder="e.g. Ajiva Logistics"
+                  placeholder="e.g. Gps Logistics"
                   value={formData.name}
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })

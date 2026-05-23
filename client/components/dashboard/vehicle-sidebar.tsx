@@ -104,7 +104,7 @@ export function VehicleSidebar({
             <div className="border-b border-[#dbe7d4] bg-[#f7fbf5] p-4">
                 <div className="flex items-center justify-between gap-3">
                     <div>
-                        <h2 className="text-xl font-black tracking-tight text-[#1f3b1f]">AjivaTracker</h2>
+                        <h2 className="text-xl font-black tracking-tight text-[#1f3b1f]">Gps Tracker</h2>
                         <p className="mt-1 text-xs font-medium text-slate-500">
                             {filteredVehicles.length} of {vehicles.length} vehicles
                         </p>

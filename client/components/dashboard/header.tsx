@@ -316,7 +316,7 @@ export function Header({
                             )}
                         </div>
                         <div className="text-left">
-                            <p className="text-2xl font-black tracking-tight">AjivaTracker</p>
+                            <p className="text-2xl font-black tracking-tight">Gps Tracker</p>
                             <p className="text-xs font-semibold text-white/80">Fleet Intelligence</p>
                         </div>
                     </button>

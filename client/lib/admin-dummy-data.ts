@@ -66,7 +66,7 @@ export type Notification = {
 
 // Initial dummy data
 let organizations: Organization[] = [
-  { _id: "org_ajiva", name: "Ajiva Tracker", email: "admin@ajiva.com", phone: "+91 98765 43210", address: "Delhi HQ", status: "active", parentId: null },
+  { _id: "org_ajiva", name: "Gps Tracker", email: "admin@ajiva.com", phone: "+91 98765 43210", address: "Delhi HQ", status: "active", parentId: null },
   { _id: "org_north", name: "North Branch", email: "north@ajiva.com", phone: "+91 98765 43211", address: "Chandigarh", status: "active", parentId: "org_ajiva" },
   { _id: "org_west", name: "West Branch", email: "west@ajiva.com", phone: "+91 98765 43212", address: "Jaipur", status: "inactive", parentId: "org_ajiva" },
   { _id: "org_south", name: "South Branch", email: "south@ajiva.com", phone: "+91 98765 43213", address: "Bangalore", status: "active", parentId: "org_ajiva" },

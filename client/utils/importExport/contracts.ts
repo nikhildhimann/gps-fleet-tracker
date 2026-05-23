@@ -167,7 +167,7 @@ export const IMPORT_MODULE_GUIDES: Record<string, ImportModuleGuide> = {
       softwareVersion: "1.0.4",
       vendorId: "ROADRPA",
       deviceModel: "RX-100",
-      manufacturer: "Ajiva Devices",
+      manufacturer: "Gps Devices",
       simNumber: "+919876543212",
       serialNumber: "SN-0001",
       firmwareVersion: "1.0.4",

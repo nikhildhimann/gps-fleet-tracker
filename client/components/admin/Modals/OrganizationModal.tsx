@@ -108,7 +108,7 @@ export default function OrganizationModal({ isOpen, onClose, organization }: Org
                                     required
                                     type="text"
                                     className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm font-bold text-gray-900 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all"
-                                    placeholder="e.g. Ajiva Logistics"
+                                    placeholder="e.g. Gps Logistics"
                                     value={formData.name}
                                     onChange={e => setFormData({ ...formData, name: e.target.value })}
                                 />

@@ -4,14 +4,14 @@ import { useEffect, useMemo, useState } from "react";
 import Table from "@/components/ui/Table";
 
 const invoices = [
-  { id: "INV-2201", org: "Ajiva Tracker", amount: "₹45,600", status: "paid", due: "Apr 28, 2024", cycle: "Apr 01 - Apr 30" },
+  { id: "INV-2201", org: "Gps Tracker", amount: "₹45,600", status: "paid", due: "Apr 28, 2024", cycle: "Apr 01 - Apr 30" },
   { id: "INV-2202", org: "North Branch", amount: "₹12,800", status: "pending", due: "May 04, 2024", cycle: "Apr 01 - Apr 30" },
   { id: "INV-2203", org: "West Branch", amount: "₹8,400", status: "overdue", due: "Apr 18, 2024", cycle: "Mar 01 - Mar 31" },
   { id: "INV-2204", org: "South Hub", amount: "₹16,200", status: "pending", due: "May 09, 2024", cycle: "Apr 01 - Apr 30" },
 ];
 
 const payments = [
-  { id: "PAY-1122", org: "Ajiva Tracker", method: "UPI", amount: "₹45,600", status: "received", time: "Today, 10:24 AM", reference: "UTR 99820121" },
+  { id: "PAY-1122", org: "Gps Tracker", method: "UPI", amount: "₹45,600", status: "received", time: "Today, 10:24 AM", reference: "UTR 99820121" },
   { id: "PAY-1123", org: "North Branch", method: "Card", amount: "₹12,800", status: "processing", time: "Yesterday, 6:10 PM", reference: "Visa 4821" },
   { id: "PAY-1124", org: "West Branch", method: "Bank Transfer", amount: "₹8,400", status: "failed", time: "Apr 18, 2024", reference: "UTR 88410291" },
   { id: "PAY-1125", org: "South Hub", method: "NetBanking", amount: "₹16,200", status: "received", time: "Apr 19, 2024", reference: "HDFC 3321" },
