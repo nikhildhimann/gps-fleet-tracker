@@ -34,9 +34,10 @@ const userSchema = {
     trim: true,
   },
 
-  passwordHash: {
+  password: {
     type: String,
     required: true,
+    alias: "passwordHash",
   },
 
   role: {
