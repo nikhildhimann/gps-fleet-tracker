@@ -9,6 +9,8 @@ import { NotificationDropdown } from "./NotificationDropdown";
 import { Badge } from "@/components/ui/badge";
 import AdminGlobalSearch from "@/components/admin/search/AdminGlobalSearch";
 
+const BASE_HOST = (process.env.NEXT_PUBLIC_API_URL || "https://gps-tracker-0ea9.onrender.com/api").replace("/api", "");
+
 type HeaderProps = {
     onOpenSidebar?: () => void;
     isSidebarOpen?: boolean;
@@ -116,7 +118,7 @@ export default function Header({ onOpenSidebar, isSidebarOpen = false }: HeaderP
                     {adminUser?.organizationId?.logo ? (
                         <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center border-2 border-blue-200 overflow-hidden shadow-sm">
                             <img
-                                src={`http://localhost:5000${adminUser.organizationId.logo}`}
+                                src={`${BASE_HOST}${adminUser.organizationId.logo}`}
                                 alt="Org Logo"
                                 className="w-full h-full object-contain p-1"
                             />

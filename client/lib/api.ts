@@ -6,7 +6,7 @@
 
 import { getSecureItem } from "@/app/admin/Helpers/encryptionHelper"
 
-const BASE_URL = "http://localhost:5000/api"
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://gps-tracker-0ea9.onrender.com/api"
 
 function authHeaders(): HeadersInit {
     const token = getSecureItem("token")

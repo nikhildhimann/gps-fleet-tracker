@@ -70,7 +70,8 @@ export default function ProfilePage() {
         role: user?.role || sessionRole,
         parentOrganizationId: organization.parentOrganizationId,
     });
-    const logoUrl = organization.logo ? `http://localhost:5000${organization.logo}` : null;
+    const baseHost = (process.env.NEXT_PUBLIC_API_URL || "https://gps-tracker-0ea9.onrender.com/api").replace("/api", "");
+    const logoUrl = organization.logo ? `${baseHost}${organization.logo}` : null;
     const canEditLogo = Boolean(user && organization.id && (!organization.parentOrganizationId || user.role === "superadmin"));
     const lastUpdated = formatDateTime(user?.updatedAt);
     const lastLogin = formatDateTime(user?.lastLoginAt || user?.lastLogin || user?.lastSeen);

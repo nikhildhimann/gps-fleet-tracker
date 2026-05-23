@@ -38,7 +38,7 @@ export type ImportResult = {
   data?: unknown;
 };
 
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://gps-tracker-0ea9.onrender.com/api";
 
 export function useImportExport() {
   const [state, setState] = useState<ImportExportState>({

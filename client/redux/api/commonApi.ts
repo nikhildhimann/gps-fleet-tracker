@@ -18,7 +18,7 @@ import { getSecureItem } from "@/app/admin/Helpers/encryptionHelper";
  * - NO auth header on login
  */
 const rawBaseQuery = fetchBaseQuery({
-  baseUrl: "http://localhost:5000/api",
+  baseUrl: process.env.NEXT_PUBLIC_API_URL || "https://gps-tracker-0ea9.onrender.com/api",
 
   prepareHeaders: (headers, { endpoint }) => {
     // ❌ login endpoint pe token nahi bhejna
