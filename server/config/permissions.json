@@ -1,0 +1,188 @@
+{
+  "superadmin": {
+    "hierarchy": 3,
+    "modules": {
+      "organizations": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "users": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "vehicle": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "gpsDevice": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "deviceMapping": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "gpsLiveData": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "gpsHistory": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "vehicleDailyStats": [
+        "read"
+      ],
+      "drivers": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "vehicleDriverMapping": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "alerts": [
+        "read",
+        "update",
+        "delete"
+      ],
+      "notifications": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "geofence": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "healthmonitoring": [
+        "read"
+      ]
+    }
+  },
+  "admin": {
+    "hierarchy": 2,
+    "modules": {
+      "organizations": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "users": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "vehicle": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "gpsDevice": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "deviceMapping": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "gpsLiveData": [
+        "read"
+      ],
+      "gpsHistory": [
+        "read"
+      ],
+      "vehicleDailyStats": [
+        "read"
+      ],
+      "alerts": [
+        "read",
+        "update",
+        "delete"
+      ],
+      "notifications": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "drivers": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "vehicleDriverMapping": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "geofence": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "healthmonitoring": [
+        "read"
+      ]
+    }
+  },
+  "driver": {
+    "hierarchy": 1,
+    "modules": {
+      "organizations": [],
+      "users": [],
+      "vehicle": [
+        "read"
+      ],
+      "gpsDevice": [
+        "read"
+      ],
+      "deviceMapping": [],
+      "gpsLiveData": [
+        "read"
+      ],
+      "gpsHistory": [
+        "read"
+      ],
+      "alerts": [
+        "read",
+        "update",
+        "delete"
+      ],
+      "drivers": [
+        "read"
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+# Required fields: vehicleNumber, imei
+# Optional fields: none
+# Mapping fields: vehicleNumber, imei
+# Note: Vehicle must already exist.
+# Note: Device must already exist.
+# Note: Device must be valid for mapping in the current organization scope.
+vehicleNumber,imei
+DL01AB1234,865342056789012

@@ -1,0 +1,9 @@
+# Required fields: name, organizationType, email, phone
+# Optional fields: addressLine, city, state, country, pincode, status
+# Mapping fields: none
+# Allowed values: organizationType = logistics, transport, school, taxi, fleet | status = active, inactive
+# Note: Do not include parent organization columns.
+# Note: Organization is created under the selected or current organization context where applicable.
+# Note: Phone must be a valid international number with country code.
+name,organizationType,email,phone,addressLine,city,state,country,pincode,status
+North Fleet Logistics,logistics,northfleet@example.com,+919876543210,101 Industrial Park,Mumbai,Maharashtra,India,400001,active

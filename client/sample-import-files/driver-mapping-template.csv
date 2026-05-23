@@ -1,0 +1,9 @@
+# Required fields: vehicleNumber, driverEmail
+# Optional fields: none
+# Mapping fields: vehicleNumber, driverEmail
+# Note: Vehicle must already exist.
+# Note: Driver must already exist.
+# Note: Driver must be active.
+# Note: Mapping must stay inside the allowed organization scope.
+vehicleNumber,driverEmail
+DL01AB1234,driver1@test.com

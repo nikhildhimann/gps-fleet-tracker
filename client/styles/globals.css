@@ -1,0 +1,47 @@
+/* Global styles for fixing overlay and z-index issues */
+
+/* Fix Leaflet map z-index to prevent overlapping UI overlays */
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 0 !important;
+}
+
+/* Ensure all overlay containers are properly stacked */
+.overlay-root {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fix dropdown z-index issues */
+.dropdown-container {
+  z-index: 999;
+  position: relative;
+}
+
+/* Prevent layout clipping */
+.layout-container {
+  overflow: visible;
+}
+
+/* Ensure modals are always on top */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Notification center positioning */
+.notification-center {
+  z-index: 1000;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}

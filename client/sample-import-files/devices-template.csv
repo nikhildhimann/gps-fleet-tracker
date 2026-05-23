@@ -1,0 +1,9 @@
+# Required fields: imei, softwareVersion
+# Optional fields: vendorId, deviceModel, manufacturer, simNumber, serialNumber, firmwareVersion, hardwareVersion, warrantyExpiry, status, vehicleRegistrationNumber
+# Mapping fields: vehicleRegistrationNumber
+# Allowed values: status = active, inactive, suspended
+# Note: IMEI must be exactly 15 digits.
+# Note: vehicleRegistrationNumber is for mapping or linking only.
+# Note: Do not include organization scope columns or runtime telemetry fields.
+imei,softwareVersion,vendorId,deviceModel,manufacturer,simNumber,serialNumber,firmwareVersion,hardwareVersion,warrantyExpiry,status,vehicleRegistrationNumber
+123456789012345,1.0.4,ROADRPA,RX-100,Ajiva Devices,+919876543212,SN-0001,1.0.4,HW-2,2027-03-13,active,MH12AB1234

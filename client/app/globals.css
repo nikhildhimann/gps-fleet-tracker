@@ -1,0 +1,310 @@
+@import "tailwindcss";
+
+:root {
+  /* Dark Theme Color System */
+  --bg-main: #0B1220;
+  --bg-card: #111827;
+  --bg-sidebar: #0F172A;
+  --bg-input: #020617;
+  --bg-hover: #020617;
+  
+  /* Primary Colors */
+  --primary: #2563EB;
+  --primary-hover: #1D4ED8;
+  --success: #22C55E;
+  --danger: #EF4444;
+  
+  /* Text Colors */
+  --text-primary: #E5E7EB;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
+  
+  /* Border Colors */
+  --border-primary: #1E293B;
+  --border-focus: #2563EB;
+  
+  /* Shadows */
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-button: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html,
+body {
+  min-height: 100%;
+  background: var(--bg-main);
+  color: var(--text-primary);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CRITICAL: Fix placeholder colors for readability */
+::placeholder {
+  color: var(--text-secondary) !important;
+  opacity: 1 !important;
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: var(--text-secondary) !important;
+  opacity: 1 !important;
+}
+
+/* Ensure light-page filter dropdown text stays readable */
+.admin-select,
+.admin-filter-select,
+.admin-select option,
+.admin-select optgroup,
+.admin-filter-select option,
+.admin-filter-select optgroup {
+  color: #0f172a !important;
+  background-color: #ffffff !important;
+}
+
+/* Device-mapping modal/select readability */
+.admin-select-readable,
+.admin-select-readable option,
+.admin-select-readable optgroup {
+  color: #0f172a !important;
+  background-color: #ffffff !important;
+}
+
+.admin-select,
+.admin-filter-select,
+.admin-select-readable {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%2364758b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-position: right 0.85rem center;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  padding-right: 2.75rem;
+}
+
+.admin-select-dark {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23cbd5e1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+}
+
+.popup-dark-modal .admin-select.admin-select-dark {
+  color: #f1f5f9 !important;
+  background-color: rgba(2, 6, 23, 0.6) !important;
+}
+
+.popup-dark-modal .admin-select.admin-select-dark:disabled {
+  background-color: rgba(15, 23, 42, 0.78) !important;
+  color: #64748b !important;
+}
+
+.popup-dark-modal input:-webkit-autofill,
+.popup-dark-modal input:-webkit-autofill:hover,
+.popup-dark-modal input:-webkit-autofill:focus,
+.popup-dark-modal textarea:-webkit-autofill,
+.popup-dark-modal textarea:-webkit-autofill:hover,
+.popup-dark-modal textarea:-webkit-autofill:focus,
+.popup-dark-modal select:-webkit-autofill,
+.popup-dark-modal select:-webkit-autofill:hover,
+.popup-dark-modal select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #f1f5f9 !important;
+  caret-color: #f1f5f9 !important;
+  border-color: #1e293b !important;
+  -webkit-box-shadow: 0 0 0 1000px rgba(2, 6, 23, 0.6) inset !important;
+  box-shadow: 0 0 0 1000px rgba(2, 6, 23, 0.6) inset !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+.admin-select:disabled,
+.admin-filter-select:disabled,
+.admin-select-readable:disabled {
+  cursor: not-allowed;
+  background-color: #f8fafc !important;
+  color: #94a3b8 !important;
+}
+
+/* Smooth transitions globally (avoid transform to keep maps stable) */
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hide scrollbars but keep content scrollable */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Leaflet drawing must not animate transforms, otherwise tiles/paths jitter while panning/zooming */
+.leaflet-container *,
+.leaflet-pane,
+.leaflet-map-pane,
+.leaflet-tile,
+.leaflet-overlay-pane svg,
+.leaflet-overlay-pane path,
+.leaflet-marker-pane img {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* Custom scrollbar for specific elements */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--bg-input);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--border-primary);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+@keyframes vehicle-move-1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(160px, -40px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes vehicle-move-2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-140px, 60px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes vehicle-move-3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(120px, -30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes border-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes float-orb {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(18px, -24px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.pulse-border {
+  position: relative;
+}
+
+.pulse-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(120deg, rgba(37, 99, 235, 0.6), rgba(16, 185, 129, 0.6), rgba(14, 116, 144, 0.6), rgba(37, 99, 235, 0.6));
+  background-size: 200% 200%;
+  animation: border-shift 8s linear infinite;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.float-orb {
+  animation: float-orb 10s ease-in-out infinite;
+}
+
+.orb-2 {
+  animation-duration: 14s;
+}
+
+.orb-3 {
+  animation-duration: 16s;
+}
+
+.orb-4 {
+  animation-duration: 18s;
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes grid-pan {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 120px 120px, 120px 120px;
+  }
+}
+
+@keyframes metric-fill {
+  0% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.fade-up {
+  animation: fade-up 0.8s ease both;
+}
+
+.grid-pan {
+  background-image:
+    linear-gradient(#e2e8f0 1px, transparent 1px),
+    linear-gradient(90deg, #e2e8f0 1px, transparent 1px);
+  background-size: 48px 48px;
+  animation: grid-pan 18s linear infinite;
+}
+
+.metric-bar {
+  background: linear-gradient(90deg, #2563eb, #22c55e, #0ea5e9);
+  animation: metric-fill 2.5s ease-in-out infinite;
+}

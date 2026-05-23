@@ -1,0 +1,8 @@
+# Required fields: vehicleType, vehicleNumber
+# Optional fields: ais140Compliant, ais140CertificateNumber, make, model, year, color, status, runningStatus, lastUpdated, deviceImei
+# Mapping fields: deviceImei
+# Allowed values: vehicleType = car, bus, truck, bike, other | status = active, inactive, maintenance, decommissioned | runningStatus = running, idle, stopped, inactive | ais140Compliant = true, false
+# Note: deviceImei is optional and is used only when you want to link an existing device during import.
+# Note: Do not include organization scope columns.
+vehicleType,vehicleNumber,ais140Compliant,ais140CertificateNumber,make,model,year,color,status,runningStatus,lastUpdated,deviceImei
+truck,MH12AB1234,true,CERT000001,Tata,Ace Gold,2024,White,active,inactive,2026-03-13T09:30:00.000Z,123456789012345

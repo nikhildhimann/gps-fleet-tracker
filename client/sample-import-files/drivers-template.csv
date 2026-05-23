@@ -1,0 +1,9 @@
+# Required fields: firstName, lastName, email, phone, licenseNumber, password
+# Optional fields: licenseExpiry, status
+# Mapping fields: none
+# Allowed values: status = active, inactive, blocked
+# Note: Do not include organization scope columns.
+# Note: licenseExpiry format should be YYYY-MM-DD.
+# Note: Password must be at least 6 characters.
+firstName,lastName,email,phone,licenseNumber,licenseExpiry,status,password
+Rohit,Kumar,rohit.kumar@example.com,+919876543213,DL01AB1234,2027-06-01,active,Secret123

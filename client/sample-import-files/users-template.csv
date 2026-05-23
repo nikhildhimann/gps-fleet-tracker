@@ -1,0 +1,8 @@
+# Required fields: firstName, email, mobile, role, password
+# Optional fields: lastName, status
+# Mapping fields: none
+# Allowed values: role = admin, driver | status = active, inactive
+# Note: Do not include organization scope columns.
+# Note: Password must be at least 6 characters.
+firstName,lastName,email,mobile,role,status,password
+Amit,Sharma,amit.sharma@example.com,+919876543211,admin,active,Secret123
